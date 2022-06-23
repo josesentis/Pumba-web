@@ -1,0 +1,17 @@
+<div id="Sidemenu" class="win-sidemenu" aria-expanded='true'>
+  <nav>
+  {% for item in menu[renderData.language] %}
+    {% if item.items.length == 0 %}
+      {# LINK BASICO #}
+      {% set activeLink = 'aria-current=page' if page.url === item.url else "" %}
+      <a href="{{ item.url }}" {{ activeLink }}><span>{{ item.title }}</span></a>
+    {%  else %}
+      {# LINK CON SUBLINKS #}
+      {% for subitem in item.items %}
+        {% set activeLink = 'aria-current=page' if page.url === subitem.url else "" %}
+        <a href="{{ subitem.url }}" {{ activeLink }}><span>{{ subitem.title }}</span></a>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  </nav>
+</div>

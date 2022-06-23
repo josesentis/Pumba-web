@@ -1,0 +1,42 @@
+@mixin button {
+    --color: var(--white);
+    --alt-color: var(--black);
+    --padding-v: var(--padding-xs);
+    --padding-h: var(--padding-s);
+
+    align-items: center;
+    appearance: none;
+    background: transparent;
+    border: 1px solid currentColor;
+    cursor: pointer;
+    color: var(--color);
+    display: flex;
+    justify-content: flex-start;
+    padding: var(--padding-v) var(--padding-h);
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+
+    * { pointer-events: none; }
+    span { display: block; }
+
+    @include isCursor() {
+        &:hover {
+            color: var(--alt-color);
+            background-color: var(--color);
+        }
+    }
+
+    &--alt {
+        --alt-color: var(--white);
+        --color: var(--black);
+    }
+
+    &--full {
+        background: var(--color);
+    }
+}
+
+.button {
+    @include button;
+}

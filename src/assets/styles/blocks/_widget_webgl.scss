@@ -1,0 +1,15 @@
+.widget-webgl {
+    @include z-index($z-index-3D);
+
+    height: 100vh;
+    position: relative;
+    width: 100vw;
+
+    canvas {
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}

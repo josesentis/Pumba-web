@@ -1,0 +1,52 @@
+@use "sass:math";
+
+:root {
+  --font-sans: 'FKGrotesk-Regular', sans-serif;
+  --font-sans-bold: 'FKGrotesk-Medium', sans-serif;
+  --font-sans-italic: 'FKGrotesk-ThinItalic', sans-serif;
+
+  --font-size-xxlarge: #{math.div(42px, 16px) * 1rem};
+  --font-size-xlarge: #{math.div(36px, 16px) * 1rem};
+  --font-size-large: #{math.div(32px, 16px) * 1rem};
+  --font-size-medium: #{math.div(28px, 16px) * 1rem};
+  --font-size-base: #{math.div(24px, 16px) * 1rem};
+  --font-size-small: #{math.div(20px, 16px) * 1rem};
+  --font-size-xsmall: #{math.div(18px, 16px) * 1rem};
+  --font-size-xxsmall: #{math.div(16px, 16px) * 1rem};
+  --font-size-xxxsmall: #{math.div(14px, 16px) * 1rem};
+  --font-size-xxxxsmall: #{math.div(12px, 16px) * 1rem};
+  --font-size-xxxxxsmall: #{math.div(8px, 16px) * 1rem};
+
+  --line-height-sans: 1.2;
+  --letter-spacing: -0.06em;
+
+  --min-font-size: 10px;
+  --max-font-size: 48px;
+  --font-size: clamp(var(--min-font-size), 1.1111vw * var(--zoom), var(--max-font-size));
+  
+  font-size: var(--font-size);
+
+  @media (max-width: $smartphone) {
+    --font-size: 16px;
+  }
+}
+
+@mixin font-sans($line-height:0) {
+  font-family: var(--font-sans);
+  font-weight: normal;
+  @if $line-height > 0 { line-height: $line-height  }
+  @else { line-height: var(--line-height-sans);  }
+}
+@mixin font-sans-bold($line-height:0) {
+  font-family: var(--font-sans-bold);
+  font-weight: 500;
+  @if $line-height > 0 { line-height: $line-height  }
+  @else { line-height: var(--line-height-sans);  }
+}
+@mixin font-sans-italic($line-height:0) {
+  font-family: var(--font-serif);
+  font-weight: 200;
+  font-style: italic;
+  @if $line-height > 0 { line-height: $line-height  }
+  @else { line-height: var(--line-height-sans);  }
+}

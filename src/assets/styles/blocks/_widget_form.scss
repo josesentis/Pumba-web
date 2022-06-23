@@ -1,0 +1,10 @@
+.widget-form {
+    --padding-h: var(--padding-xl);
+    --padding-v: calc(2 * var(--padding-xl));
+}
+
+.widget-form {
+    height: 100vh;
+    padding: var(--padding-v) var(--padding-h);
+    width: 100vw;
+}

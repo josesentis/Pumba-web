@@ -1,0 +1,9 @@
+{% macro block(name, text, attrs) %}
+    <fieldset class="custom-checkbox --checkbox">
+        <input type="checkbox" id="{{ name }}" name="{{ name }}" {{ attrs }}>
+        <label for="{{ name }}">
+            <span class="checkmark"><span></span></span>
+            <span>{{ text }}</span>
+        </label>
+    </fieldset>
+{% endmacro %}

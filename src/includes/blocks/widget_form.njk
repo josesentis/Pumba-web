@@ -1,0 +1,68 @@
+{% macro block(data) %}
+    <section class="widget-form" scroll-item>
+        <form 
+            id=""
+            name="join-team-form"
+            action=""
+            method="post"
+            data-token="e87af843-f43a-4d47-b8ad-56da85733c92"
+            data-subject="Reserva"
+            data-href="https://cuchillo-mailforms.herokuapp.com/messages"
+            data-inputs-nok="Hay algún error en los campos."
+            data-mssg-ok="Muchas gracias, nos pondremos en contacto contigo."
+            data-mssg-nok="Algo ha salido mal, intentalo de nuevo."
+            data-type='mailforms'
+            class="form validate __form"
+        >
+            <div class="form__wrapper">
+                <input class="__role" name="role" type="hidden">
+                <fieldset>
+                    <label for="name"><span>Name</span></label>
+                    <input type="text" name="name" id="name" data-form-required autocomplete="off">
+                </fieldset>
+                <fieldset>
+                    <label for="email"><span>Email</span></label>
+                    <input type="email" name="email" id="email" data-form-required data-form-email autocomplete="off">
+                </fieldset>
+                {# <fieldset class="--select">
+                    <label for="discipline"><span>Discipline</span></label>
+                    <select name="discipline" id="discipline" data-form-required>
+                        <option value disabled selected style="display:none"></option>
+                        {% for discipline in data.disciplines %}
+                        <option value="{{ discipline.discipline }}">{{ discipline.discipline }}</option>
+                        {% endfor %}
+                    </select>
+                </fieldset>
+                <fieldset class="--select">
+                    <label for="role"><span>{{ texts[renderData.language].form_role }}</span></label>
+                    {% for discipline in data.disciplines %}
+                    <select class="role __role-select" name="role-{{ discipline.discipline }}" id="role-{{ discipline.discipline }}" data-form-required disabled data-discipline="{{ discipline.discipline }}">
+                        <option value disabled selected style="display:none"></option>
+                        {% for role in discipline.roles %}
+                        <option value="{{ role.role }}">{{ role.role }}</option>
+                        {% endfor %}
+                    </select>
+                    {% endfor %}
+                </fieldset> #}
+            </div>
+            <div class="form__wrapper">
+                <fieldset class="--file">
+                    <label for="file"><span>File</span></label>
+                    <input type="file" id="file" name="file" data-form-required data-form-file>
+                    <span class="filename __filename"></span>
+                </fieldset>
+            </div>
+            <div class="form__wrapper">
+                {% import "modules/custom_checkbox.njk" as CustomCheckbox with context %}
+                {{ CustomCheckbox.block('policy', 'He leido y acepto la política, etc.', 'data-form-required data-form-checkbox') }}
+            </div>
+            <div class="form__footer">
+                <button class="button __submit" type='submit' aria-label='Send' name="send" id="send">
+                    <span>
+                        Send
+                    </span>
+                </button>
+            </div>
+        </form>
+    </section>
+{% endmacro %}

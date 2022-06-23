@@ -1,0 +1,41 @@
+<Footer id="Footer" scroll-item>
+    <nav>
+        {# RRSS #}
+        {% if contact[renderData.language].rrss %}
+            <div>
+                {% for item in contact[renderData.language].rrss %}
+                    <a class="link" href="{{ item.url }}" rel="nofollow" target='_blank'><span>{{ item.text }}</span></a>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {# CONTACT INFO #}
+        {% if contact[renderData.language].contact %}
+            <div>
+                {% for item in contact[renderData.language].contact %}
+                    <a href="{{ item.url }}" rel="nofollow"><span>{{ item.text }}</span></a>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {# LEGALES #}
+        {% if all[renderData.language].legales %}
+            <div>
+                {% for item in all[renderData.language].legales %}
+                    {% set activeClass = "__link-active" if page.url === "/" + item.url else "" %}
+                    <a class="link-arrow {{ activeClass }}" href="{{ item.link }}" rel="nofollow"><span>{{ item.title.rendered }}</span></a>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {# LANGS #}
+        {% if locales.langs %}
+            <div>
+                {% for lang in locales.langs %}
+                    {% set activeClass = "is-active" if lang.code == locale else "" %}
+                    <a class="link-arrow {{ activeClass }}" href="{{ lang.url }}" data-internal><span>{{ lang.label }}</span></a>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </nav>
+</Footer>
