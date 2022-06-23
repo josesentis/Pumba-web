@@ -12,7 +12,7 @@ module.exports = {
     /* URL FRONT */
     url: "https://www.mrcorrales.com",
     /* URL BACK */
-    dataUrl: "https://starter.cuchillo.tools/",
+    dataUrl: "https://pumba.josesentis.org.es/",
 };
 
 
