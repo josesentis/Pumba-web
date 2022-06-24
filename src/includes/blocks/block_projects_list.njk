@@ -1,0 +1,14 @@
+{% macro block(data) %}
+    <section class="block-projects-list" scroll-item>
+        <ul class="block-projects-list__items">
+            {% for item in data.projects %}
+                {% set project = utils.get(all[renderData.language].projects, item.project.ID) %}
+                <li>
+                    <a class="project __project" href="{{ project.link }}">
+                        {{ project.title.rendered }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endmacro %}

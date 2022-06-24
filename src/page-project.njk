@@ -5,9 +5,8 @@ renderData:
   description: "{{ data.acf.seo.description }}"
   image: "{{ data.acf.seo.image.sizes.facebook }}"
   image_twitter: "{{ data.acf.seo.image.sizes.twitter }}"
-  url: "{{ data.link }}"
 pagination:
-  data: pages
+  data: projects
   size: 1
   alias: data
 permalink: "{{ data.link }}"
@@ -19,5 +18,5 @@ layout: layout/default
 {% import "flexible.njk" as FlexibleContent with context %}
 
 <article class='default' data-page='{{ __page }}' data-palette='{{ __palette }}'>
-    {{ FlexibleContent.flexible(data.acf.page_components) }}
+    {{ FlexibleContent.flexible(data.acf.blocks_custom) }}
 </article>

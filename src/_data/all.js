@@ -6,7 +6,7 @@ const getUrl = require('../_helpers/getUrl.js');
 const getUrlLanguage = require('../_helpers/getUrlLanguage.js');
 const endpoint = `${build.dataUrl}/wp-json/wp/v2/`;
 
-const types = ["pages", "news", "legales"]
+const types = ["pages", "news", "projects", "legales"]
 
 async function getData(){
     console.log("------ Fetching all... ------");

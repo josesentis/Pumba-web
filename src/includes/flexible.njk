@@ -1,10 +1,15 @@
+{# Flexible content #}
 {% import "blocks/block_text.njk" as block_text with context %}
 {% import "blocks/block_image.njk" as block_image with context %}
-{% import "blocks/widget_landing.njk" as widget_landing with context %}
+
+{# Page components #}
 {% import "blocks/widget_form.njk" as widget_form with context %}
+{% import "blocks/widget_landing.njk" as widget_landing with context %}
 {% import "blocks/widget_webgl.njk" as widget_webgl with context %}
+{% import "blocks/block_projects_list.njk" as block_projects_list with context %}
 
 {% set blocks = {
+    "project_list": block_projects_list,
     "block_text": block_text,
     "block_image": block_image,
     "widget_landing": widget_landing,
