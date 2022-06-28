@@ -40,7 +40,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode,
       body: JSON.stringify({
-        name: file.fieldName,
+        name: file.fileName.filename,
         url: body
       })
     };
@@ -99,8 +99,9 @@ const processImageUpload = async (event) => {
       file.on("data", (data) => {
         result.files.push({
           file: data,
-          fieldName: _fieldname,
-          fileName
+          fileName,
+          encoding,
+          contentType
         });
       });
     });

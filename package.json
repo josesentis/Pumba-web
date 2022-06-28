@@ -63,6 +63,13 @@
     "busboy": "^1.6.0",
     "gsap": "npm:@gsap/shockingly@^3.10.4",
     "node-fetch": "^2.6.1",
-    "three": "^0.140.1"
+    "three": "^0.140.1",
+    "-": "0.0.1",
+    "dotenv": "^16.0.0",
+    "fs": "^0.0.1-security",
+    "g": "^2.0.1",
+    "netlify-lambda": "^2.0.15",
+    "path": "^0.12.7",
+    "regenerator-runtime": "^0.13.9"
   }
 }

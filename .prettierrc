@@ -3,11 +3,11 @@
   "tabWidth": 4,
   "trailingComma": "none",
   "overrides": [
-    {
-      "files": ".js",
-      "options": {
-        "tabWidth": 2
+      {
+          "files": "*.js",
+          "options": {
+              "tabWidth": 2
+          }
       }
-    }
   ]
 }
