@@ -1,5 +1,14 @@
 {% macro block(data) %}
     <section class="widget-clients" scroll-item>
         WIDGET CLIENTS
+
+        <ul class="widget-clients__items">
+            {% for item in clients[renderData.language].clients %}
+                <li>
+                    {% img item.image %}
+                    {{ item.name }}
+                </li>
+            {% endfor %}
+        </ul>
     </section>
 {% endmacro %}
