@@ -1,7 +1,7 @@
 {% macro block(data) %}
-    <section class="block-projects-list" scroll-item>
-        BLOCK PROJECT LIST
-        <ul class="block-projects-list__items">
+    <section class="block_higlight_projects" scroll-item>
+        BLOCK HIGHLIGHT PROJECTS
+        <ul class="block_higlight_projects__items">
             {% for item in data.projects %}
                 {% set project = utils.get(all[renderData.language].projects, item.project.ID) %}
                 <li>

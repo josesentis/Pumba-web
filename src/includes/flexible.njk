@@ -3,18 +3,24 @@
 {% import "blocks/block_image.njk" as block_image with context %}
 
 {# Page components #}
-{% import "blocks/widget_form.njk" as widget_form with context %}
-{% import "blocks/widget_landing.njk" as widget_landing with context %}
-{% import "blocks/widget_webgl.njk" as widget_webgl with context %}
+{# {% import "blocks/widget_form.njk" as widget_form with context %} #}
+{% import "blocks/widget_contact.njk" as widget_contact with context %}
+{% import "blocks/widget_clients.njk" as widget_clients with context %}
+{# {% import "blocks/widget_webgl.njk" as widget_webgl with context %} #}
+{% import "blocks/block_quote.njk" as block_quote with context %}
 {% import "blocks/block_projects_list.njk" as block_projects_list with context %}
+{% import "blocks/block_higlight_projects.njk" as block_higlight_projects with context %}
+{% import "blocks/block_related_projects.njk" as block_related_projects with context %}
 
 {% set blocks = {
+    "widget_contact": widget_contact,
+    "widget_clients": widget_clients,
     "project_list": block_projects_list,
     "block_text": block_text,
     "block_image": block_image,
-    "widget_landing": widget_landing,
-    "widget_form": widget_form,
-    "widget_webgl": widget_webgl
+    "block_quote": block_quote,
+    "block_higlight_projects": block_higlight_projects,
+    "block_related_projects": block_related_projects
 } %}
 
 {% macro flexible(content) %}
