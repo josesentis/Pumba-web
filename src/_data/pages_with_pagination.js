@@ -1,6 +1,6 @@
 const locales = require('./locales.js');
 const _all = require('./_all.js');
-const type = "pages"
+const type = "pages";
 
 async function getData(){
     console.log("------ Fetching pages with pagination... ------");

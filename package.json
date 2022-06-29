@@ -59,18 +59,18 @@
     "webpack-manifest-plugin": "^5.0.0"
   },
   "dependencies": {
+    "-": "0.0.1",
     "aws-sdk": "^2.1131.0",
     "busboy": "^1.6.0",
-    "gsap": "npm:@gsap/shockingly@^3.10.4",
-    "node-fetch": "^2.6.1",
-    "three": "^0.140.1",
-    "-": "0.0.1",
     "dotenv": "^16.0.0",
     "fs": "^0.0.1-security",
     "g": "^2.0.1",
+    "gsap": "npm:@gsap/shockingly@^3.10.4",
     "lottie-web": "^5.9.2",
     "netlify-lambda": "^2.0.15",
+    "node-fetch": "^2.6.1",
     "path": "^0.12.7",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "three": "^0.140.1"
   }
 }

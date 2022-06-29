@@ -1,9 +1,9 @@
 // const _all = require('./_all.js');
 // const locales = require('./locales.js');
-// const type = "posts"
+// const type = "legales"
 
 // async function getData(){
-//     console.log("------ Fetching posts... ------");
+//     console.log("------ Fetching pages legales... ------");
 
 //     const dataFinal = [];
 //     const dataAll = _all;
