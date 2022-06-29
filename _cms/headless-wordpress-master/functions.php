@@ -64,6 +64,13 @@ if( function_exists('acf_add_options_page') ) {
         'menu_slug' 	=> 'team-options',
         "icon_url"     => "dashicons-businesswoman",
     ));
+
+	acf_add_options_page(array(
+        'page_title' 	=> 'Clients Data',
+        'menu_title'	=> 'Clients Data',
+        'menu_slug' 	=> 'clients-options',
+        "icon_url"     => "dashicons-businessperson",
+    ));
 }
 
 ////REMOVE COOKIES

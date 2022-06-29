@@ -2,9 +2,9 @@
   add_action( "init", "init_create_custom_post_type");
 
   function init_create_custom_post_type() {
-    create_custom_post_type("legales", "/", "Texto Legal", "Textos Legales", 5, "dashicons-hammer");
+    // create_custom_post_type("legales", "/", "Texto Legal", "Textos Legales", 5, "dashicons-hammer");
     create_custom_post_type("projects", "projects", "Proyecto", "Proyectos", 6, "dashicons-welcome-view-site");
-    create_custom_post_type("news", "news", "Noticia", "Noticias", 7, "dashicons-media-text");
+    // create_custom_post_type("news", "news", "Noticia", "Noticias", 7, "dashicons-media-text");
   }
 
   function create_custom_post_type(
