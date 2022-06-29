@@ -1,6 +1,6 @@
 @use "sass:math";
 
-.block-default {
+.block-text {
     --font-size-h1: var(--font-size-xlarge);
     --font-size-h2: var(--font-size-large);
     --font-size-h3: var(--font-size-mid);
@@ -13,7 +13,7 @@
     --padding-h: var(--padding-l);
 }
 
-.block-default {
+.block-text {
     color: var(--primary-color);
 
     @include font-sans();
@@ -71,7 +71,7 @@
 }
 
 @media (max-width: $smartphone) {
-  .block-default {
+  .block-text {
       --font-size-h1: var(--font-size-mid);
       --font-size-h2: var(--font-size-mid);
       --font-size-h3: var(--font-size-mid);
